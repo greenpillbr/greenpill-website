@@ -1,0 +1,24 @@
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+}
+
+.item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}

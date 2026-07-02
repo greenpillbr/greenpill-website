@@ -1,0 +1,55 @@
+.section {
+  padding: 64px 0;
+  background: var(--color-white);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 49px;
+  background: var(--color-green-light);
+  text-align: center;
+  min-height: 420px;
+}
+
+.icon {
+  width: auto;
+  height: 160px;
+  object-fit: contain;
+}
+
+@media (max-width: 809.98px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: auto;
+    border-radius: 32px;
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .card {
+    min-height: 380px;
+  }
+}

@@ -1,0 +1,54 @@
+.accordion {
+  width: 100%;
+  background: var(--color-white);
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.item {
+  width: 100%;
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(54, 57, 64);
+}
+
+.icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.panel {
+  overflow: hidden;
+}
+
+.panel p {
+  margin: 0 0 20px;
+  color: rgb(54, 57, 64);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(54, 57, 64, 0.15);
+}
+
+@media (max-width: 809.98px) {
+  .trigger {
+    font-size: 0.9rem;
+    padding: 16px 0;
+  }
+}

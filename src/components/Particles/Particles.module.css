@@ -1,0 +1,12 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  height: auto;
+  opacity: 0.85;
+}

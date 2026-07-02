@@ -1,0 +1,30 @@
+.section {
+  padding: 64px 0;
+  background: var(--color-white);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(0.2);
+}
+
+@media (max-width: 809.98px) {
+  .section {
+    padding: 48px 0;
+  }
+}

@@ -1,0 +1,7 @@
+@import './fonts.css';
+@import './tokens.css';
+@import './typography.css';
+
+main {
+  padding-top: var(--nav-height);
+}

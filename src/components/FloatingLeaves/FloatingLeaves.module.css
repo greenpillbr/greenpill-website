@@ -1,0 +1,25 @@
+.leaf {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.leafLeft {
+  width: min(250px, 30vw);
+  left: -5%;
+  bottom: 10%;
+}
+
+.leafRight {
+  width: min(280px, 32vw);
+  right: -8%;
+  top: 18%;
+}
+
+@media (max-width: 809.98px) {
+  .leafLeft,
+  .leafRight {
+    opacity: 0.45;
+    width: 120px;
+  }
+}
