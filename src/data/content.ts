@@ -9,11 +9,10 @@ export const LINKS = {
 } as const
 
 export const NAV_ITEMS = [
-  { label: 'Home', href: '#hero' },
-  { label: 'Projetos', href: '#projetos' },
-  { label: 'Serviços', href: '#servicos' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contato', href: '#contato' },
+  { label: 'aprender', href: '#participe', hasDropdown: true },
+  { label: 'EXPLORAR', href: '#projetos', hasDropdown: true },
+  { label: 'comunidade', href: LINKS.charmverse, hasDropdown: true },
+  { label: 'co-criar', href: '#servicos', hasDropdown: true },
 ] as const
 
 export const PROBLEM_CARDS = [

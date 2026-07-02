@@ -15,7 +15,7 @@
   --font-body: 'Inter', system-ui, sans-serif;
 
   --container-max: 1200px;
-  --nav-height: 72px;
+  --nav-height: 64px;
 
   --bp-tablet-min: 810px;
   --bp-desktop-min: 1200px;

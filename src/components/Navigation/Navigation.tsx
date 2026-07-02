@@ -1,15 +1,51 @@
 import { useState } from 'react'
-import { NAV_ITEMS } from '../../data/content'
+import { LINKS, NAV_ITEMS, asset } from '../../data/content'
 import styles from './Navigation.module.css'
+
+function ChevronDown() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+      <path
+        d="M3 5.5L7 9.5L11 5.5"
+        fill="transparent"
+        stroke="rgb(0, 0, 0)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+function ArrowRight() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M5 12H19M19 12L13 6M19 12L13 18"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
 
 export function Navigation() {
   const [open, setOpen] = useState(false)
 
   return (
     <header className={styles.header}>
-      <nav className={`${styles.nav} container`} aria-label="Principal">
-        <a href="#hero" className={styles.logo} onClick={() => setOpen(false)}>
-          GREENPILL BRASIL
+      <nav className={styles.nav} aria-label="Principal">
+        <a href="#hero" className={styles.logoLink} onClick={() => setOpen(false)}>
+          <img
+            src={asset('greenpill-logo.svg')}
+            alt="GREENPILL™ BRASIL"
+            className={styles.logo}
+            width={83}
+            height={33}
+          />
         </a>
 
         <button
@@ -23,15 +59,39 @@ export function Navigation() {
           <span className={styles.menuIcon} data-open={open} />
         </button>
 
-        <ul id="primary-menu" className={`${styles.links} ${open ? styles.linksOpen : ''}`}>
-          {NAV_ITEMS.map((item) => (
-            <li key={item.href}>
-              <a href={item.href} onClick={() => setOpen(false)}>
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div id="primary-menu" className={`${styles.menu} ${open ? styles.menuOpen : ''}`}>
+          <ul className={styles.links}>
+            {NAV_ITEMS.map((item) => (
+              <li key={item.label}>
+                <a
+                  href={item.href}
+                  className={styles.link}
+                  onClick={() => setOpen(false)}
+                  {...(item.href.startsWith('http')
+                    ? { target: '_blank', rel: 'noreferrer noopener' }
+                    : {})}
+                >
+                  <span>{item.label}</span>
+                  {item.hasDropdown && (
+                    <span className={styles.chevron}>
+                      <ChevronDown />
+                    </span>
+                  )}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <a
+          href={LINKS.calendly}
+          className={styles.cta}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <span>Fale conosco</span>
+          <ArrowRight />
+        </a>
       </nav>
     </header>
   )

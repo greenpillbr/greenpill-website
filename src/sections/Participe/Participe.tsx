@@ -3,7 +3,7 @@ import styles from './Participe.module.css'
 
 export function Participe() {
   return (
-    <section className={styles.section}>
+    <section id="participe" className={styles.section}>
       <div className={`${styles.container} container`}>
         <h2 className="h1">PARTICIPE DO MOVIMENTO</h2>
         <div className={styles.grid}>
