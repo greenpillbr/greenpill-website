@@ -1,0 +1,71 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.leaf {
+  position: absolute;
+}
+
+.leaf svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Right side */
+.leafTopRight {
+  top: 8%;
+  right: -2%;
+}
+
+.leafRightMid {
+  top: 32%;
+  right: -3%;
+}
+
+.leafRightLow {
+  top: 48%;
+  right: 2%;
+}
+
+.leafRightTop {
+  top: 14%;
+  right: -5%;
+}
+
+/* Left side */
+.leafLeftMid {
+  top: 24%;
+  left: -3%;
+}
+
+.leafLeftLow {
+  top: 42%;
+  left: -2%;
+}
+
+.leafLeftTop {
+  top: 52%;
+  left: 1%;
+}
+
+.leafLeftEdge {
+  top: 30%;
+  left: -4%;
+}
+
+@media (max-width: 809.98px) {
+  .leaf {
+    opacity: 0.5;
+    transform: scale(0.7);
+  }
+
+  .leafRightTop,
+  .leafLeftEdge {
+    display: none;
+  }
+}

@@ -1,58 +1,92 @@
 .hero {
   position: relative;
-  min-height: clamp(640px, 90vh, 896px);
-  padding: calc(var(--nav-height) + 72px) 0 48px;
+  min-height: clamp(680px, 92vh, 900px);
+  padding: calc(var(--nav-height) + 96px) 0 0;
   background: var(--color-green-primary);
   overflow: hidden;
 }
 
 .content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
 }
 
 .textBlock {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
   max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.headingWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.headingWrap h1 {
+  position: relative;
+  z-index: 1;
+}
+
+.underline {
+  position: absolute;
+  left: 50%;
+  bottom: -18px;
+  transform: translateX(-50%);
+  width: 78%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
-.underline {
+.bird {
   position: absolute;
-  width: min(578px, 70%);
-  left: 50%;
-  transform: translateX(-50%);
-  top: 260px;
-  z-index: 1;
+  top: 18%;
+  right: 8%;
+  width: clamp(120px, 14vw, 193px);
+  height: auto;
+  z-index: 2;
   pointer-events: none;
+}
+
+@media (max-width: 1199.98px) {
+  .bird {
+    right: 3%;
+    top: 12%;
+  }
 }
 
 @media (max-width: 809.98px) {
   .hero {
-    min-height: 720px;
-    padding-top: calc(var(--nav-height) + 48px);
+    min-height: 760px;
+    padding-top: calc(var(--nav-height) + 56px);
   }
 
   .textBlock {
     max-width: 100%;
   }
 
-  .underline {
-    top: 200px;
-    width: 85%;
+  .bird {
+    width: 96px;
+    top: 9%;
+    right: 2%;
+    opacity: 0.85;
   }
-}
 
-@media (min-width: 810px) and (max-width: 1199.98px) {
-  .hero {
-    min-height: 780px;
+  .underline {
+    bottom: -12px;
   }
 }
