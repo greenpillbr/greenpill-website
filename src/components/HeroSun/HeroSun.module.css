@@ -1,9 +1,10 @@
 .wrapper {
   position: absolute;
   left: 50%;
-  bottom: -300px;
-  transform: translateX(-50%);
-  width: min(760px, 94vw);
+  bottom: 0;
+  /* Center on the hero bottom edge so only the top half is visible. */
+  transform: translate(-50%, 50%);
+  width: min(1216px, 150.4vw);
   aspect-ratio: 1035 / 941;
   pointer-events: none;
   z-index: 1;
@@ -27,7 +28,6 @@
 
 @media (max-width: 809.98px) {
   .wrapper {
-    bottom: -190px;
-    width: min(520px, 98vw);
+    width: min(832px, 156.8vw);
   }
 }

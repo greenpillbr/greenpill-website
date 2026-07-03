@@ -11,9 +11,9 @@ interface LayerDef {
 }
 
 // Back-to-front, matching the Framer group (diamond backing -> disc -> bursts -> capsule).
-// The two sunbursts spin at different speeds/directions to create the moving-rays effect.
+// Diamond and disc stay static; only the two sunbursts spin (opposite directions).
 const LAYERS: LayerDef[] = [
-  { key: 'rays', width: '100%', rotate: 360, duration: 110 },
+  { key: 'rays', width: '100%' },
   { key: 'ring', width: '45%' },
   { key: 'burst', width: '48.5%', rotate: 360, duration: 46 },
   { key: 'glow', width: '63%', rotate: -360, duration: 68 },
