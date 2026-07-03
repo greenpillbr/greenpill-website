@@ -14,58 +14,81 @@
   width: 100%;
   height: auto;
   display: block;
+  overflow: visible;
 }
 
-/* Right side */
-.leafTopRight {
-  top: 8%;
-  right: -2%;
+/* Left edge, top to bottom */
+.leftCluster {
+  top: -3%;
+  left: -70px;
 }
 
-.leafRightMid {
-  top: 32%;
-  right: -3%;
+.leftFan {
+  top: 26%;
+  left: 8px;
 }
 
-.leafRightLow {
+.leftWide {
   top: 48%;
-  right: 2%;
+  left: -90px;
 }
 
-.leafRightTop {
+.leftTall {
+  bottom: 4%;
+  left: -30px;
+}
+
+.leftBranch {
+  bottom: 14%;
+  left: 60px;
+}
+
+.leftPinwheel {
+  bottom: -40px;
+  left: -30px;
+}
+
+/* Right edge, top to bottom */
+.rightFan {
+  top: 2%;
+  right: -40px;
+}
+
+.rightCluster {
   top: 14%;
-  right: -5%;
+  right: -80px;
 }
 
-/* Left side */
-.leafLeftMid {
-  top: 24%;
-  left: -3%;
+.rightWide {
+  top: 44%;
+  right: -90px;
 }
 
-.leafLeftLow {
-  top: 42%;
-  left: -2%;
+.rightTall {
+  top: 56%;
+  right: 8px;
 }
 
-.leafLeftTop {
-  top: 52%;
-  left: 1%;
+.rightBranch {
+  bottom: 16%;
+  right: 56px;
 }
 
-.leafLeftEdge {
-  top: 30%;
-  left: -4%;
+.rightPinwheel {
+  bottom: -40px;
+  right: -30px;
 }
 
 @media (max-width: 809.98px) {
   .leaf {
-    opacity: 0.5;
-    transform: scale(0.7);
+    opacity: 0.6;
+    transform: scale(0.65);
   }
 
-  .leafRightTop,
-  .leafLeftEdge {
+  .leftFan,
+  .leftBranch,
+  .rightBranch,
+  .rightCluster {
     display: none;
   }
 }

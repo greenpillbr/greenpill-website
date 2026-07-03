@@ -3,6 +3,7 @@ import { Button } from '../../components/Button/Button'
 import { Leaves } from '../../components/Leaves/Leaves'
 import { HeroSun } from '../../components/HeroSun/HeroSun'
 import { LINKS, asset } from '../../data/content'
+import araraLeftUrl from '../../assets/manual-downloaded-assets/arara.svg'
 import styles from './Hero.module.css'
 
 export function Hero() {
@@ -11,10 +12,19 @@ export function Hero() {
       <Leaves />
 
       <motion.img
+        src={araraLeftUrl}
+        alt=""
+        aria-hidden="true"
+        className={styles.araraLeft}
+        animate={{ y: [0, -12, 0], rotate: [0, -2, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+      />
+
+      <motion.img
         src={asset('bird-globe.svg')}
         alt=""
         aria-hidden="true"
-        className={styles.bird}
+        className={styles.araraRight}
         animate={{ y: [0, -14, 0], rotate: [0, 2, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
       />

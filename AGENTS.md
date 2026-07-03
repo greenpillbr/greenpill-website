@@ -56,7 +56,8 @@ Scripts (`package.json`):
     ├── vite-env.d.ts
     ├── assets/
     │   ├── fonts/            # Local fonts (e.g. PP Supply Sans)
-    │   └── images/           # Local images/SVGs (bundled via Vite)
+    │   ├── images/           # Local images/SVGs (bundled via Vite)
+    │   └── manual-downloaded-assets/ # Assets added by hand (e.g. arara.svg); import directly
     ├── data/
     │   ├── content.ts        # Copy, links, cards, nav, asset() helper
     │   ├── leafShapes.ts     # Hero edge leaf SVG strings
