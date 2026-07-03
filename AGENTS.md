@@ -73,6 +73,8 @@ Scripts (`package.json`):
     └── sections/             # Page sections (folder per section)
 ```
 
+Circulo assets (under `src/assets/images/`): `circulo-pontilhado.svg`, `circulo-mundo.svg`, `qTD6HVWX2kKHX7RXKJxyzPQUBNA.svg`, `eyLX4foZDsM7ZsEBePePR6HPdiQ.svg`, `ns8AQym3lp3rqDTsbChEIOdQk8.svg`.
+
 Each component/section folder typically has:
 
 - `Name.tsx`
@@ -108,6 +110,8 @@ Order on the home page:
 | `Ticker` | Horizontal image marquee |
 | `Accordion` | FAQ expand/collapse |
 | `Particles` | Background particle images |
+| `Circulo` | ArmaDigital emblem: rings, globe, labels, rotating burst |
+| `ArmaDigitalTriangles` | Edge triangle decorations for ArmaDigital |
 | `Astronaut` | Contact section astronaut + mouse repulsion |
 
 ## Data and assets

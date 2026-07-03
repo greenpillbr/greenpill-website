@@ -1,10 +1,11 @@
-import { Particles } from '../../components/Particles/Particles'
+import { ArmaDigitalTriangles } from '../../components/ArmaDigitalTriangles/ArmaDigitalTriangles'
+import { Circulo } from '../../components/Circulo/Circulo'
 import styles from './ArmaDigital.module.css'
 
 export function ArmaDigital() {
   return (
     <section className={styles.section}>
-      <Particles />
+      <ArmaDigitalTriangles />
       <div className={`${styles.container} container`}>
         <div className={styles.header}>
           <h2 className="h1">e para combatê-la usaremos uma ferramenta digital</h2>
@@ -13,11 +14,7 @@ export function ArmaDigital() {
             ação coletiva.
           </p>
         </div>
-        <div className={styles.circle} aria-hidden="true">
-          <div className={styles.ring} />
-          <div className={styles.ringInner} />
-          <div className={styles.core}>WEB3</div>
-        </div>
+        <Circulo />
       </div>
       <div className={styles.bar} />
     </section>

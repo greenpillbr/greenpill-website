@@ -1,0 +1,83 @@
+.root {
+  position: relative;
+  width: min(1107px, 92vw);
+  aspect-ratio: 1213 / 1172;
+  margin-inline: auto;
+  flex-shrink: 0;
+}
+
+.ringOuter,
+.ringMid,
+.ringInner {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--color-black);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ringOuter {
+  width: 85.2%;
+  height: 88.1%;
+  background: var(--color-green-light);
+}
+
+.ringMid {
+  width: 63.2%;
+  height: 65.4%;
+  background: var(--color-primary-yellow);
+}
+
+.ringInner {
+  width: 43.1%;
+  height: 44.6%;
+  background: var(--color-yellow-card);
+}
+
+.layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  max-width: none;
+  pointer-events: none;
+}
+
+.pontilhado {
+  width: 68.8%;
+}
+
+.mundo {
+  width: 23.8%;
+}
+
+.labelsPrimary {
+  width: 48.2%;
+}
+
+.labelsSecondary {
+  width: 64.1%;
+}
+
+.burst {
+  width: 92.2%;
+  animation: spin 100s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@media (max-width: 809.98px) {
+  .root {
+    width: min(520px, 95vw);
+  }
+}
