@@ -26,7 +26,7 @@ const LEAVES: LeafDef[] = [
   { shape: 'cluster', className: styles.rightCluster, width: 296, rotate: 0, sway: 4, duration: 7, flip: true },
   { shape: 'wide', className: styles.rightWide, width: 328, rotate: 14, sway: -5, duration: 8 },
   { shape: 'tall', className: styles.rightTall, width: 130, rotate: -13, sway: 3, duration: 9 },
-  { shape: 'branchRight', className: styles.rightBranch, width: 121, rotate: 0, sway: -4, duration: 8 },
+  { shape: 'branchRight', className: styles.rightBranch, width: 121, rotate: 180, sway: -4, duration: 8 },
   { shape: 'pinwheelRight', className: styles.rightPinwheel, width: 218, rotate: 0, sway: 3, duration: 9 },
 ]
 
