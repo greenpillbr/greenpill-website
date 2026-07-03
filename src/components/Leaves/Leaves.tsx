@@ -15,7 +15,7 @@ interface LeafDef {
 const LEAVES: LeafDef[] = [
   // Left edge, top to bottom
   { shape: 'cluster', className: styles.leftCluster, width: 296, rotate: 0, sway: -4, duration: 8.5 },
-  { shape: 'fan', className: styles.leftFan, width: 176, rotate: 29, sway: 3, duration: 9 },
+  { shape: 'fan', className: styles.leftFan, width: 176, rotate: 119, sway: 3, duration: 9 },
   { shape: 'wide', className: styles.leftWide, width: 328, rotate: 0, sway: 5, duration: 7 },
   { shape: 'tall', className: styles.leftTall, width: 130, rotate: 5, sway: -3, duration: 8 },
   { shape: 'branchLeft', className: styles.leftBranch, width: 117, rotate: 0, sway: 4, duration: 7.5 },
