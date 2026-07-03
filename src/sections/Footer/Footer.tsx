@@ -81,7 +81,12 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className={styles.powered}>POWERED BY GreenPill Brasil</div>
+      <div className={styles.powered}>
+        2026 Desenvolvido por{' '}
+        <a href="https://raduke.tech" target="_blank" rel="noreferrer noopener">
+          raduke.tech
+        </a>
+      </div>
     </footer>
   )
 }
