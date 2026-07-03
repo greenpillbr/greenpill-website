@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   /* Tall enough that the text block sits fully above the visible half of the sun. */
-  min-height: clamp(820px, 100vh, 1040px);
+  min-height: clamp(568px, 69.26vh, 720px);
   padding: calc(var(--nav-height) + 48px) 0 0;
   background: var(--color-green-primary);
   overflow: hidden;
@@ -18,7 +18,7 @@
   flex: 0 0 auto;
   width: 100%;
   /* Reserve the visible half of the sun (half of min(1216px, 150.4vw) × 941/1035). */
-  padding-bottom: min(560px, 70vw);
+  padding-bottom: min(388px, 48.48vw);
 }
 
 .textBlock {
@@ -98,13 +98,13 @@
 
 @media (max-width: 809.98px) {
   .hero {
-    min-height: 780px;
+    min-height: 540px;
     padding-top: calc(var(--nav-height) + 40px);
   }
 
   .content {
     /* Half of min(832px, 156.8vw) × 941/1035 ≈ 380px. */
-    padding-bottom: min(400px, 78vw);
+    padding-bottom: min(277px, 54vw);
   }
 
   .textBlock {
