@@ -22,7 +22,7 @@ const LEAVES: LeafDef[] = [
   { shape: 'pinwheelLeft', className: styles.leftPinwheel, width: 210, rotate: 0, sway: -3, duration: 9.5 },
 
   // Right edge, top to bottom
-  { shape: 'fan', className: styles.rightFan, width: 176, rotate: 0, sway: -4, duration: 7.5, flip: true },
+  { shape: 'fan', className: styles.rightFan, width: 176, rotate: 180, sway: -4, duration: 7.5, flip: true },
   { shape: 'cluster', className: styles.rightCluster, width: 296, rotate: 0, sway: 4, duration: 7, flip: true },
   { shape: 'wide', className: styles.rightWide, width: 328, rotate: 14, sway: -5, duration: 8 },
   { shape: 'tall', className: styles.rightTall, width: 130, rotate: -13, sway: 3, duration: 9 },
