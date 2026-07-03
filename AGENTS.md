@@ -84,7 +84,7 @@ Order on the home page:
 
 1. `Navigation` (fixed header)
 2. `Hero`
-3. `Descoordena`
+3. `Colapso`
 4. `ArmaDigital`
 5. `Contato`
 6. `OQueGreenpill`

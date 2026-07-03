@@ -59,7 +59,7 @@ npx wrangler pages deploy dist --project-name=greenpill-website
 
 Home page sections (in order):
 
-Navigation → Hero → Descoordenação → Arma Digital → Contato → O que é GreenPill → Projetos → Faça Parte → Serviços → Participe do Movimento → Parceiros → FAQ → Footer
+Navigation → Hero → Colapso → Arma Digital → Contato → O que é GreenPill → Projetos → Faça Parte → Serviços → Participe do Movimento → Parceiros → FAQ → Footer
 
 ## Source
 

@@ -1,0 +1,138 @@
+.section {
+  position: relative;
+  background: var(--color-gray-bg);
+  overflow: hidden;
+}
+
+.root {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Vector 158 — top-right, rotation -31° (Framer: top -64, right -36, 250×334) */
+.rootTopRight {
+  top: -64px;
+  right: -36px;
+  width: 250px;
+  height: auto;
+  transform: rotate(-31deg);
+}
+
+/* Vector 158 — bottom-left, rotation 150° (Framer: bottom -118, left -78, 250×334) */
+.rootBottomLeft {
+  bottom: -118px;
+  left: -78px;
+  width: 250px;
+  height: auto;
+  transform: rotate(150deg);
+}
+
+/* Filled root — bottom-right (Framer: right -133, bottom -191, 381×486) */
+.rootBottomRight {
+  right: -133px;
+  bottom: -191px;
+  width: 381px;
+  height: auto;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  padding-block: 88px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 700px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.header h2,
+.header p {
+  margin: 0;
+}
+
+.header h2 {
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px 39px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.image {
+  width: 70%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  width: 70%;
+}
+
+.tag {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 13px;
+  border-radius: 999px;
+  background: var(--color-dark);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 809.98px) {
+  .container {
+    padding-block: 45px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .rootTopRight {
+    width: 160px;
+    top: -40px;
+    right: -24px;
+  }
+
+  .rootBottomLeft {
+    width: 160px;
+    bottom: -70px;
+    left: -50px;
+  }
+
+  .rootBottomRight {
+    width: 221px;
+    right: -80px;
+    bottom: -110px;
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

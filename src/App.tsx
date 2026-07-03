@@ -1,6 +1,6 @@
 import { Navigation } from './components/Navigation/Navigation'
 import { Hero } from './sections/Hero/Hero'
-import { Descoordena } from './sections/Descoordena/Descoordena'
+import { Colapso } from './sections/Colapso/Colapso'
 import { ArmaDigital } from './sections/ArmaDigital/ArmaDigital'
 import { Contato } from './sections/Contato/Contato'
 import { OQueGreenpill } from './sections/OQueGreenpill/OQueGreenpill'
@@ -19,7 +19,7 @@ function App() {
       <Navigation />
       <main>
         <Hero />
-        <Descoordena />
+        <Colapso />
         <ArmaDigital />
         <Contato />
         <OQueGreenpill />

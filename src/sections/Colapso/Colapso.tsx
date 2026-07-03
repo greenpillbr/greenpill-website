@@ -1,12 +1,31 @@
 import { PROBLEM_CARDS, asset } from '../../data/content'
-import styles from './Descoordena.module.css'
+import styles from './Colapso.module.css'
 
-export function Descoordena() {
+export function Colapso() {
   return (
     <section className={styles.section}>
+      <img
+        src={asset('root-stroke.svg')}
+        alt=""
+        aria-hidden="true"
+        className={`${styles.root} ${styles.rootTopRight}`}
+      />
+      <img
+        src={asset('root-stroke.svg')}
+        alt=""
+        aria-hidden="true"
+        className={`${styles.root} ${styles.rootBottomLeft}`}
+      />
+      <img
+        src={asset('Bho1L9RlaE9jYDOgWEarnx2QG88.svg')}
+        alt=""
+        aria-hidden="true"
+        className={`${styles.root} ${styles.rootBottomRight}`}
+      />
+
       <div className={`${styles.container} container`}>
         <div className={styles.header}>
-          <h2 className="h1">descoordenação é a raiz dos males</h2>
+          <h2 className="h1">O mundo caminha para o colapso</h2>
           <p className="p-lg">
             Diversos problemas de descoordenação que ainda atingem a maior parte da população sem
             previsão de diminuição das médias globais desses dados tristes.
