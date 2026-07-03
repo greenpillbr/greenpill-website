@@ -28,8 +28,7 @@ export function Colapso() {
         <div className={styles.header}>
           <h2 className="h1">O mundo caminha para o colapso</h2>
           <p className="p-lg">
-            Diversos problemas de descoordenação que ainda atingem a maior parte da população sem
-            previsão de diminuição das médias globais desses dados tristes.
+            O modo de produção mundial não é sustentável e os sinais da degradação social e ambiental são cada vez mais evidentes.
           </p>
         </div>
         <div className={styles.grid}>
