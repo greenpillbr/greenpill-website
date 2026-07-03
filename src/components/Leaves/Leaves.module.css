@@ -40,7 +40,7 @@
 
 .leftBranch {
   bottom: 14%;
-  left: 60px;
+  left: 0;
 }
 
 .leftPinwheel {
@@ -71,7 +71,7 @@
 
 .rightBranch {
   bottom: 16%;
-  right: 56px;
+  right: 0;
 }
 
 .rightPinwheel {
