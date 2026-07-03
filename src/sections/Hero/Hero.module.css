@@ -1,7 +1,11 @@
 .hero {
   position: relative;
-  min-height: clamp(680px, 92vh, 900px);
-  padding: calc(var(--nav-height) + 96px) 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Tall enough that the text block sits fully above the visible half of the sun. */
+  min-height: clamp(820px, 100vh, 1040px);
+  padding: calc(var(--nav-height) + 48px) 0 0;
   background: var(--color-green-primary);
   overflow: hidden;
 }
@@ -11,37 +15,60 @@
   z-index: 3;
   display: flex;
   justify-content: center;
+  flex: 0 0 auto;
+  width: 100%;
+  /* Reserve the visible half of the sun (half of min(1216px, 150.4vw) × 941/1035). */
+  padding-bottom: min(560px, 70vw);
 }
 
 .textBlock {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  max-width: 600px;
+  gap: 20px;
+  max-width: 640px;
   width: 100%;
   text-align: center;
 }
 
-.headingWrap {
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+}
+
+.line,
+.midLine {
+  display: block;
+}
+
+.midLine {
   position: relative;
   display: inline-block;
 }
 
-.headingWrap h1 {
+.midText {
   position: relative;
   z-index: 1;
 }
 
+/* Yellow stroke sits under the middle line only ("pílula verde pra"). */
 .underline {
   position: absolute;
   left: 50%;
-  bottom: -18px;
+  top: 58%;
   transform: translateX(-50%);
-  width: 78%;
+  width: 108%;
   height: auto;
   z-index: 0;
   pointer-events: none;
+}
+
+.subtext {
+  max-width: 520px;
+  margin: 0;
 }
 
 .actions {
@@ -49,7 +76,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
-  margin-top: 12px;
+  margin-top: 4px;
 }
 
 .bird {
@@ -71,12 +98,23 @@
 
 @media (max-width: 809.98px) {
   .hero {
-    min-height: 760px;
-    padding-top: calc(var(--nav-height) + 56px);
+    min-height: 780px;
+    padding-top: calc(var(--nav-height) + 40px);
+  }
+
+  .content {
+    /* Half of min(832px, 156.8vw) × 941/1035 ≈ 380px. */
+    padding-bottom: min(400px, 78vw);
   }
 
   .textBlock {
     max-width: 100%;
+    gap: 16px;
+  }
+
+  .underline {
+    top: 55%;
+    width: 112%;
   }
 
   .bird {
@@ -84,9 +122,5 @@
     top: 9%;
     right: 2%;
     opacity: 0.85;
-  }
-
-  .underline {
-    bottom: -12px;
   }
 }
