@@ -1,46 +1,42 @@
 import { motion } from 'framer-motion'
+import type { CSSProperties } from 'react'
+import { SUN_SHAPES, type SunLayer } from '../../data/sunShapes'
 import styles from './HeroSun.module.css'
 
-const RAY_COUNT = 32
-
-function Rays() {
-  const rays = Array.from({ length: RAY_COUNT }, (_, i) => {
-    const angle = (360 / RAY_COUNT) * i
-    return (
-      <rect
-        key={i}
-        x={248}
-        y={18}
-        width={4}
-        height={70}
-        rx={2}
-        fill="#FFCC00"
-        transform={`rotate(${angle} 250 250)`}
-      />
-    )
-  })
-  return <>{rays}</>
+interface LayerDef {
+  key: SunLayer
+  width: string
+  rotate?: number
+  duration?: number
 }
+
+// Back-to-front, matching the Framer group (diamond backing -> disc -> bursts -> capsule).
+// The two sunbursts spin at different speeds/directions to create the moving-rays effect.
+const LAYERS: LayerDef[] = [
+  { key: 'rays', width: '100%', rotate: 360, duration: 110 },
+  { key: 'ring', width: '45%' },
+  { key: 'burst', width: '48.5%', rotate: 360, duration: 46 },
+  { key: 'glow', width: '63%', rotate: -360, duration: 68 },
+  { key: 'core', width: '21%' },
+]
 
 export function HeroSun() {
   return (
     <div className={styles.wrapper} aria-hidden="true">
-      <motion.svg
-        className={styles.sun}
-        viewBox="0 0 500 500"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
-      >
-        <Rays />
-      </motion.svg>
-
-      <div className={styles.disc}>
-        <div className={styles.brasil} />
-        <div className={styles.pill}>
-          <span className={styles.pillGreen} />
-          <span className={styles.pillWhite} />
-        </div>
-      </div>
+      {LAYERS.map((layer) => (
+        <motion.div
+          key={layer.key}
+          className={styles.layer}
+          style={{ '--layer-width': layer.width } as CSSProperties}
+          animate={layer.rotate !== undefined ? { rotate: layer.rotate } : undefined}
+          transition={
+            layer.rotate !== undefined
+              ? { duration: layer.duration, repeat: Infinity, ease: 'linear' }
+              : undefined
+          }
+          dangerouslySetInnerHTML={{ __html: SUN_SHAPES[layer.key] }}
+        />
+      ))}
     </div>
   )
 }
