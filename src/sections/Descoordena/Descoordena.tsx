@@ -1,11 +1,9 @@
 import { PROBLEM_CARDS, asset } from '../../data/content'
-import { FloatingLeaves } from '../../components/FloatingLeaves/FloatingLeaves'
 import styles from './Descoordena.module.css'
 
 export function Descoordena() {
   return (
     <section className={styles.section}>
-      <FloatingLeaves variant="right" />
       <div className={`${styles.container} container`}>
         <div className={styles.header}>
           <h2 className="h1">descoordenação é a raiz dos males</h2>
