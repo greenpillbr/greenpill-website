@@ -16,7 +16,6 @@ export function ArmaDigital() {
         </div>
         <Circulo />
       </div>
-      <div className={styles.bar} />
     </section>
   )
 }
