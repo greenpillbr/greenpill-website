@@ -3,7 +3,6 @@ import { Hero } from './sections/Hero/Hero'
 import { Colapso } from './sections/Colapso/Colapso'
 import { ArmaDigital } from './sections/ArmaDigital/ArmaDigital'
 import { Contato } from './sections/Contato/Contato'
-import { OQueGreenpill } from './sections/OQueGreenpill/OQueGreenpill'
 import { Projetos } from './sections/Projetos/Projetos'
 import { FaAParte } from './sections/FaAParte/FaAParte'
 import { Servicos } from './sections/Servicos/Servicos'
@@ -22,7 +21,7 @@ function App() {
         <Colapso />
         <ArmaDigital />
         <Contato />
-        <OQueGreenpill />
+        {/* <OQueGreenpill /> */}
         <Projetos />
         <FaAParte />
         <Servicos />

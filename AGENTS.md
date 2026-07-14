@@ -112,7 +112,7 @@ Order on the home page:
 | `Particles` | Background particle images |
 | `Circulo` | ArmaDigital emblem: rings, globe, labels, rotating burst |
 | `ArmaDigitalTriangles` | Edge triangle decorations for ArmaDigital |
-| `Astronaut` | Contact section astronaut + mouse repulsion |
+| `Skater` | Contact section skater + mouse repulsion |
 
 ## Data and assets
 

@@ -1,5 +1,5 @@
 import { Button } from '../../components/Button/Button'
-import { Astronaut } from '../../components/Astronaut/Astronaut'
+import { Skater } from '../../components/Skater/Skater'
 import { LINKS, asset } from '../../data/content'
 import styles from './Contato.module.css'
 
@@ -8,7 +8,7 @@ export function Contato() {
     <section id="contato" className={styles.section}>
       <div className={`${styles.container} container`}>
         <div className={styles.visual}>
-          <Astronaut />
+          <Skater />
           <img
             src={asset('qNgNaYpuyAcE2k3pX7rDJdS0Oo.svg')}
             alt=""
