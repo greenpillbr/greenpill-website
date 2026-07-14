@@ -14,8 +14,11 @@ export function ArmaDigital() {
             ação coletiva.
           </p>
         </div>
+      </div>
+      <div className={styles.circuloAnchor}>
         <Circulo />
       </div>
+      <div className={styles.bar} />
     </section>
   )
 }

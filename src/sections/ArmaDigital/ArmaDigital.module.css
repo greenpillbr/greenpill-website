@@ -3,6 +3,8 @@
   padding: 64px 0 0;
   overflow: hidden;
   background: var(--color-green-primary);
+  /* Reserve space for the visible top half of Circulo. */
+  padding-bottom: calc(min(1107px, 92vw) * (1172 / 1213) * 0.5);
 }
 
 .container {
@@ -12,7 +14,6 @@
   flex-direction: column;
   align-items: center;
   gap: 48px;
-  padding-bottom: 32px;
 }
 
 .header {
@@ -28,7 +29,22 @@
   margin: 0;
 }
 
+.circuloAnchor {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  /* Center on the section bottom edge so only the top half is visible. */
+  transform: translate(-50%, 50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
 .bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
   height: 8px;
   background: var(--color-primary-yellow);
 }
@@ -36,10 +52,10 @@
 @media (max-width: 809.98px) {
   .section {
     padding-top: 48px;
+    padding-bottom: calc(min(520px, 95vw) * (1172 / 1213) * 0.5);
   }
 
   .container {
     gap: 32px;
-    padding-bottom: 24px;
   }
 }

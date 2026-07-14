@@ -1,5 +1,6 @@
 .h0 {
   font-family: var(--font-display);
+  font-weight: 400;
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 100%;
   letter-spacing: -0.02em;
@@ -8,6 +9,7 @@
 
 .h1 {
   font-family: var(--font-display);
+  font-weight: 400;
   font-size: clamp(2rem, 4.5vw, 3.625rem);
   line-height: 100%;
   letter-spacing: -0.02em;
@@ -16,6 +18,7 @@
 
 .h2 {
   font-family: var(--font-display);
+  font-weight: 400;
   font-size: clamp(1.75rem, 3.5vw, 3rem);
   line-height: 110%;
   letter-spacing: 0;

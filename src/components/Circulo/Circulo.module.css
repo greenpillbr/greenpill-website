@@ -14,31 +14,35 @@
   border: 1px solid var(--color-black);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .ringOuter {
   width: 85.2%;
   height: 88.1%;
   background: var(--color-green-light);
+  transform: translate(-50%, -50%);
 }
 
 .ringMid {
   width: 63.2%;
   height: 65.4%;
   background: var(--color-primary-yellow);
+  transform: translate(-50%, -50%);
 }
 
 .ringInner {
   width: 43.1%;
   height: 44.6%;
   background: var(--color-yellow-card);
+  /* Spins with COMUNIDADE / DIGITAL / BLOCKCHAIN / TERRITÓRIO */
+  animation: spinCw 80s linear infinite;
 }
 
 .layer {
   position: absolute;
   top: 50%;
   left: 50%;
+  animation: spinCcw 100s linear infinite;
   transform: translate(-50%, -50%);
   width: auto;
   height: auto;
@@ -56,23 +60,34 @@
 
 .labelsPrimary {
   width: 48.2%;
+  animation: spinCw 80s linear infinite;
 }
 
 .labelsSecondary {
   width: 64.1%;
+  animation: spinCcw 100s linear infinite;
 }
 
 .burst {
   width: 92.2%;
-  animation: spin 100s linear infinite;
+  animation: spinCw 100s linear infinite;
 }
 
-@keyframes spin {
+@keyframes spinCw {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
   }
   to {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spinCcw {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
 

@@ -14,11 +14,6 @@ export function Circulo() {
       />
       <img className={`${styles.layer} ${styles.mundo}`} src={asset('circulo-mundo.svg')} alt="" />
       <img
-        className={`${styles.layer} ${styles.labelsPrimary}`}
-        src={asset('qTD6HVWX2kKHX7RXKJxyzPQUBNA.svg')}
-        alt=""
-      />
-      <img
         className={`${styles.layer} ${styles.labelsSecondary}`}
         src={asset('eyLX4foZDsM7ZsEBePePR6HPdiQ.svg')}
         alt=""
