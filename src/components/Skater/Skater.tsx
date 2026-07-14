@@ -1,20 +1,13 @@
-import { motion } from 'framer-motion'
-import { useRepulsionEffect } from '../../hooks/useRepulsionEffect'
 import { asset } from '../../data/content'
 import styles from './Skater.module.css'
 
 export function Skater() {
-  const { ref, x, y } = useRepulsionEffect()
 
   return (
-    <motion.div ref={ref} className={styles.wrapper} style={{ x, y }}>
-      <motion.img
+      <img
         src={asset('skater.svg')}
         alt="Skater GreenPill"
         className={styles.image}
-        animate={{ y: [0, -8, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
       />
-    </motion.div>
   )
 }
