@@ -61,25 +61,39 @@ export function Navigation() {
 
         <div id="primary-menu" className={`${styles.menu} ${open ? styles.menuOpen : ''}`}>
           <ul className={styles.links}>
-            {NAV_ITEMS.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  className={styles.link}
-                  onClick={() => setOpen(false)}
-                  {...(item.href.startsWith('http')
-                    ? { target: '_blank', rel: 'noreferrer noopener' }
-                    : {})}
+            {NAV_ITEMS.map((item) => {
+              const hint = 'hint' in item ? item.hint : undefined
+              const hintId = hint ? `nav-hint-${item.label}` : undefined
+
+              return (
+                <li
+                  key={item.label}
+                  className={hint ? styles.linkItem : undefined}
                 >
-                  <span>{item.label}</span>
-                  {item.hasDropdown && (
-                    <span className={styles.chevron}>
-                      <ChevronDown />
+                  <a
+                    href={item.href}
+                    className={styles.link}
+                    onClick={() => setOpen(false)}
+                    aria-describedby={hintId}
+                    {...(item.href.startsWith('http')
+                      ? { target: '_blank', rel: 'noreferrer noopener' }
+                      : {})}
+                  >
+                    <span>{item.label}</span>
+                    {item.hasDropdown && (
+                      <span className={styles.chevron}>
+                        <ChevronDown />
+                      </span>
+                    )}
+                  </a>
+                  {hint && (
+                    <span id={hintId} role="tooltip" className={styles.hint}>
+                      {hint}
                     </span>
                   )}
-                </a>
-              </li>
-            ))}
+                </li>
+              )
+            })}
           </ul>
         </div>
 

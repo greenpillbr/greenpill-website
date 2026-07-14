@@ -9,10 +9,8 @@ export const LINKS = {
 } as const
 
 export const NAV_ITEMS = [
-  { label: 'aprender', href: '#participe', hasDropdown: true },
-  { label: 'EXPLORAR', href: '#projetos', hasDropdown: true },
-  { label: 'comunidade', href: LINKS.charmverse, hasDropdown: true },
-  { label: 'co-criar', href: '#servicos', hasDropdown: true },
+  { label: "Capsula", href: 'www.capsula.greenpill.com.br', hasDropdown: false, hint: "Nosso Hub central e ferramentas usadas pelos energizantes da comunidade!" },
+  { label: 'Projetos', href: '#projetos', hasDropdown: false },
 ] as const
 
 export const PROBLEM_CARDS = [
