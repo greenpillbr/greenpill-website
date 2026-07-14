@@ -6,7 +6,10 @@ const root = fileURLToPath(new URL('..', import.meta.url))
 
 const imageUrls = [
   'https://framerusercontent.com/images/3qm2Mof2cqd4tANUTj9dgI6js.png',
-  'https://framerusercontent.com/images/4SC13C3XcBANtkONRYcfz8v6fzg.svg',
+  {
+    url: 'https://framerusercontent.com/images/4SC13C3XcBANtkONRYcfz8v6fzg.svg',
+    name: 'skater.svg',
+  },
   'https://framerusercontent.com/images/7goIYE6dQXbxeylHDxe3fems.svg',
   'https://framerusercontent.com/images/BDMoE666gzsgqIoOX9Xy0O9vhqo.png',
   'https://framerusercontent.com/images/Bho1L9RlaE9jYDOgWEarnx2QG88.svg',
@@ -46,8 +49,9 @@ const fontUrls = [
   },
 ]
 
-async function download(url, destDir) {
-  const name = basename(url.split('?')[0])
+async function download(entry, destDir) {
+  const url = typeof entry === 'string' ? entry : entry.url
+  const name = typeof entry === 'string' ? basename(url.split('?')[0]) : entry.name
   const dest = join(destDir, name)
   const res = await fetch(url)
   if (!res.ok) throw new Error(`Failed ${url}: ${res.status}`)
@@ -60,8 +64,8 @@ async function download(url, destDir) {
 await mkdir(join(root, 'src/assets/images'), { recursive: true })
 await mkdir(join(root, 'src/assets/fonts'), { recursive: true })
 
-for (const url of imageUrls) {
-  await download(url, join(root, 'src/assets/images'))
+for (const entry of imageUrls) {
+  await download(entry, join(root, 'src/assets/images'))
 }
 
 for (const { url, name } of fontUrls) {

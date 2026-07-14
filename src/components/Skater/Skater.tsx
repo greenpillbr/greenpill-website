@@ -9,7 +9,7 @@ export function Skater() {
   return (
     <motion.div ref={ref} className={styles.wrapper} style={{ x, y }}>
       <motion.img
-        src={asset('4SC13C3XcBANtkONRYcfz8v6fzg.svg')}
+        src={asset('skater.svg')}
         alt="Skater GreenPill"
         className={styles.image}
         animate={{ y: [0, -8, 0] }}
