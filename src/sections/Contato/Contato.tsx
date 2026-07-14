@@ -3,18 +3,28 @@ import { Skater } from '../../components/Skater/Skater'
 import { LINKS, asset } from '../../data/content'
 import styles from './Contato.module.css'
 
+const roses = [
+  styles.roseTopLeft,
+  styles.roseTopRight,
+  styles.roseBottomLeft,
+  styles.roseBottomRight,
+] as const
+
 export function Contato() {
   return (
     <section id="contato" className={styles.section}>
       <div className={`${styles.container} container`}>
-        <div className={styles.visual}>
-          <Skater />
+        {roses.map((roseClass) => (
           <img
-            src={asset('qNgNaYpuyAcE2k3pX7rDJdS0Oo.svg')}
+            key={roseClass}
+            src={asset('diamondsRose.svg')}
             alt=""
-            className={`${styles.decor} ${styles.decorTop}`}
+            className={`${styles.decor} ${roseClass}`}
             aria-hidden="true"
           />
+        ))}
+        <div className={styles.visual}>
+          <Skater />
         </div>
         <div className={styles.content}>
           <h2 className="h1">Conecte-se com a comunidade</h2>

@@ -35,7 +35,10 @@ const imageUrls = [
   'https://framerusercontent.com/images/nJ3c2LS60AUN9mU8paK7hWYIwOI.svg',
   'https://framerusercontent.com/images/nvIt6mHlUyr5kU7vUIKEF1Qs.png',
   'https://framerusercontent.com/images/Pmefwe75InjCPJzpju52a8iPyQ.svg',
-  'https://framerusercontent.com/images/qNgNaYpuyAcE2k3pX7rDJdS0Oo.svg',
+  {
+    url: 'https://framerusercontent.com/images/qNgNaYpuyAcE2k3pX7rDJdS0Oo.svg',
+    name: 'diamondsRose.svg',
+  },
   'https://framerusercontent.com/images/QNnasYHVez6btgGkjRLkmoiS8.svg',
   'https://framerusercontent.com/images/U3OnGtwOS595rdTGDvPZdu5uiMI.png',
   'https://framerusercontent.com/images/v8nOqeEKUoxJWcWz47vKCRcRQR0.svg',

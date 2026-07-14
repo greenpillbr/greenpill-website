@@ -4,6 +4,7 @@
 }
 
 .container {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
@@ -12,8 +13,13 @@
   padding-block: 64px;
 }
 
-.visual {
+.visual,
+.content {
   position: relative;
+  z-index: 1;
+}
+
+.visual {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,13 +28,32 @@
 .decor {
   position: absolute;
   pointer-events: none;
-  opacity: 0.35;
+  height: auto;
+  z-index: 0;
 }
 
-.decorTop {
-  width: 280px;
-  top: -120px;
-  right: -40px;
+.roseTopLeft {
+  width: 344px;
+  top: -178px;
+  left: -131px;
+}
+
+.roseTopRight {
+  width: 373px;
+  top: -262px;
+  right: -115px;
+}
+
+.roseBottomLeft {
+  width: 296px;
+  bottom: -243px;
+  left: -46px;
+}
+
+.roseBottomRight {
+  width: 385px;
+  bottom: -314px;
+  right: 0;
 }
 
 .content {
@@ -58,13 +83,54 @@
     order: 1;
   }
 
-  .decorTop {
-    display: none;
+  .roseTopLeft {
+    width: 206px;
+    top: -67px;
+    left: -40px;
+  }
+
+  .roseTopRight {
+    width: 154px;
+    top: -146px;
+    right: -99px;
+  }
+
+  .roseBottomLeft {
+    width: 201px;
+    bottom: -190px;
+    left: -140px;
+  }
+
+  .roseBottomRight {
+    width: 210px;
+    top: 171px;
+    right: -137px;
+    bottom: unset;
   }
 }
 
 @media (min-width: 810px) and (max-width: 1199.98px) {
   .container {
     gap: 32px;
+  }
+
+  .roseTopLeft {
+    top: -303px;
+    left: -201px;
+  }
+
+  .roseTopRight {
+    top: -423px;
+    right: -186px;
+  }
+
+  .roseBottomLeft {
+    bottom: -369px;
+    left: -45px;
+  }
+
+  .roseBottomRight {
+    bottom: -420px;
+    right: -148px;
   }
 }
