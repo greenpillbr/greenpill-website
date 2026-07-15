@@ -1,15 +1,14 @@
 export const LINKS = {
-  charmverse: 'https://app.charmverse.io/greenpillbrasil/greenpill-brasil-7604445943499236',
-  calendly: 'https://calendly.com/ctomaz/30min?back=1&month=2025-12',
   telegram: 'https://t.me/greenpillbrasil',
-  linkedin: 'https://www.linkedin.com/company/greenpillbrasil',
+  whatsapp: 'https://chat.whatsapp.com/BPYKPrIBMgk2E967H6HR9m',
   twitter: 'https://x.com/greenpillbrasil',
-  instagram: 'https://www.instagram.com/greenpillbrasil',
+  instagram: 'https://www.instagram.com/greenpillbr',
   youtube: 'https://www.youtube.com/@greenpillbrasil',
+  capsula: 'https://capsula.greenpill.com.br',
 } as const
 
 export const NAV_ITEMS = [
-  { label: "Capsula", href: 'www.capsula.greenpill.com.br', hasDropdown: false, hint: "Nosso Hub central e ferramentas usadas pelos energizantes da comunidade!" },
+  { label: "Capsula", href: LINKS.capsula, hasDropdown: false, hint: "Nosso Hub central e ferramentas usadas pelos energizantes da comunidade!" },
   { label: 'Torne-se um energizante', href: '#contato', hasDropdown: false },
   { label: 'Projetos', href: '#projetos', hasDropdown: false },
 ] as const

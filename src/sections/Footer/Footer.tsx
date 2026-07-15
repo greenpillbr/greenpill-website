@@ -2,10 +2,10 @@ import { LINKS } from '../../data/content'
 import styles from './Footer.module.css'
 
 const socialLinks = [
-  { label: 'LinkedIn', href: LINKS.linkedin },
-  { label: 'X', href: LINKS.twitter },
+  { label: 'WhatsApp', href: LINKS.whatsapp },
   { label: 'Instagram', href: LINKS.instagram },
   { label: 'YouTube', href: LINKS.youtube },
+  { label: 'X', href: LINKS.twitter },
 ]
 
 export function Footer() {
@@ -47,8 +47,8 @@ export function Footer() {
                 <a href="#faq">FAQ</a>
               </li>
               <li>
-                <a href={LINKS.charmverse} target="_blank" rel="noreferrer noopener">
-                  Comunidade
+                <a href={LINKS.capsula} target="_blank" rel="noreferrer noopener">
+                  Capsula
                 </a>
               </li>
             </ul>
@@ -57,19 +57,14 @@ export function Footer() {
             <h3>Contato</h3>
             <ul>
               <li>
-                <a href={LINKS.calendly} target="_blank" rel="noreferrer noopener">
-                  Agendar acolhimento
-                </a>
-              </li>
-              <li>
-                <a href={LINKS.telegram} target="_blank" rel="noreferrer noopener">
-                  Telegram
+                <a href={LINKS.whatsapp} target="_blank" rel="noreferrer noopener">
+                  WhatsApp
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <h3>LEGAL</h3>
+            {/* <h3>LEGAL</h3>
             <ul>
               <li>
                 <a href="#hero">Termos</a>
@@ -77,7 +72,7 @@ export function Footer() {
               <li>
                 <a href="#hero">Privacidade</a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
         <div className={styles.powered}>

@@ -98,7 +98,7 @@ export function Navigation() {
         </div>
 
         <a
-          href={LINKS.calendly}
+          href={LINKS.whatsapp}
           className={styles.cta}
           target="_blank"
           rel="noreferrer noopener"
