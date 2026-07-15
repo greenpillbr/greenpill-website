@@ -10,6 +10,7 @@ export const LINKS = {
 
 export const NAV_ITEMS = [
   { label: "Capsula", href: 'www.capsula.greenpill.com.br', hasDropdown: false, hint: "Nosso Hub central e ferramentas usadas pelos energizantes da comunidade!" },
+  { label: 'Torne-se um energizante', href: '#contato', hasDropdown: false },
   { label: 'Projetos', href: '#projetos', hasDropdown: false },
 ] as const
 

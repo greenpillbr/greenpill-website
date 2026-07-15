@@ -54,7 +54,7 @@ export function Hero() {
             para nossa comunidade.
           </p>
           <div className={styles.actions}>
-            <Button href={LINKS.charmverse} variant="primary">
+            <Button href={'#contato'} variant="primary">
               Começar jornada
             </Button>
             <Button href={LINKS.calendly}>marcar acolhimento</Button>
