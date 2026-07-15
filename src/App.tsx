@@ -28,8 +28,8 @@ function App() {
         <Participe />
         <Parceiros />
         <Faq />
-      </main>
       <Footer />
+      </main>
     </>
   )
 }

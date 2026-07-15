@@ -80,12 +80,16 @@ export function Footer() {
             </ul>
           </div>
         </div>
-      </div>
-      <div className={styles.powered}>
-        2026 Desenvolvido por{' '}
-        <a href="https://raduke.tech" target="_blank" rel="noreferrer noopener">
-          raduke.tech
-        </a>
+        <div className={styles.powered}>
+          <span>Designed by Mainnet.</span>
+          <span>GreenPill Brasil - 2026</span>
+          <span>
+            Desenvolvido por{' '}
+            <a href="https://raduke.tech" target="_blank" rel="noreferrer noopener">
+              raduke.tech
+            </a>
+          </span>
+        </div>
       </div>
     </footer>
   )
